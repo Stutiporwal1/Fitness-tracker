@@ -56,4 +56,16 @@ print("Unique values in Max_BPM before cleaning:", df['Max_BPM'].unique())
 
 df['Max_BPM'] = pd.to_numeric(df['Max_BPM'], errors='coerce')
 
+df['Age'].hist(bins=20)
+plt.title("Age Distribution")
+plt.xlabel("Age")
+plt.ylabel("Frequency")
+plt.show()
+
+df['Calories_Burned'].hist(bins=20)
+plt.title("Calories Burned Distribution")
+plt.xlabel("Calories Burned")
+plt.ylabel("Frequency")
+plt.show()
+
 
