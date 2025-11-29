@@ -36,4 +36,8 @@ sns.heatmap(df.isnull(), cbar=False, cmap='viridis')
 plt.title("Missing Values Heatmap")
 plt.show()
 
+df['Age'] = df['Age'].fillna(df['Age'].mean())
+df['Weight (kg)'] = df['Weight (kg)'].fillna(df['Weight (kg)'].median())
+df['Height (m)'] = df['Height (m)'].fillna(df['Height (m)'].mean())
+
 
