@@ -24,3 +24,5 @@ import seaborn as sns
 df = pd.read_csv("/gym_members_exercise_tracking_synthetic_data.csv")
 df.head()
 
+print(df.shape)
+
