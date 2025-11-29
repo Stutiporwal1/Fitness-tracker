@@ -49,4 +49,7 @@ print(df.isnull().sum())
 duplicate_count = df.duplicated().sum()
 print(f"Number of duplicate rows: {duplicate_count}")
 
+df = df.drop_duplicates()
+print("Duplicates removed.")
+
 
