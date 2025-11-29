@@ -46,4 +46,7 @@ df['Workout_Type'] = df['Workout_Type'].fillna(df['Workout_Type'].mode()[0])
 print("Remaining missing values per column:")
 print(df.isnull().sum())
 
+duplicate_count = df.duplicated().sum()
+print(f"Number of duplicate rows: {duplicate_count}")
+
 
