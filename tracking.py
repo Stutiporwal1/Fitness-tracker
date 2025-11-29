@@ -43,4 +43,7 @@ df['Height (m)'] = df['Height (m)'].fillna(df['Height (m)'].mean())
 df['Gender'] = df['Gender'].fillna(df['Gender'].mode()[0])
 df['Workout_Type'] = df['Workout_Type'].fillna(df['Workout_Type'].mode()[0])
 
+print("Remaining missing values per column:")
+print(df.isnull().sum())
+
 
