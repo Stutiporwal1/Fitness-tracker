@@ -68,4 +68,12 @@ plt.xlabel("Calories Burned")
 plt.ylabel("Frequency")
 plt.show()
 
+sns.countplot(x='Gender', data=df)
+plt.title("Gender Distribution")
+plt.show()
+
+sns.countplot(x='Workout_Type', data=df)
+plt.title("Workout Type Distribution")
+plt.show()
+
 
