@@ -54,4 +54,6 @@ print("Duplicates removed.")
 
 print("Unique values in Max_BPM before cleaning:", df['Max_BPM'].unique())
 
+df['Max_BPM'] = pd.to_numeric(df['Max_BPM'], errors='coerce')
+
 
