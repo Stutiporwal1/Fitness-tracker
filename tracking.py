@@ -52,4 +52,6 @@ print(f"Number of duplicate rows: {duplicate_count}")
 df = df.drop_duplicates()
 print("Duplicates removed.")
 
+print("Unique values in Max_BPM before cleaning:", df['Max_BPM'].unique())
+
 
