@@ -79,6 +79,15 @@ plt.show()
 bmi_trend = df.groupby('Workout_Frequency (days/week)')['BMI'].mean().reset_index()
 print(bmi_trend)
 
+correlation = df['Session_Duration (hours)'].corr(df['Calories_Burned'])
+print(f"Correlation between Session_Duration and Calories_Burned: {correlation:.2f}")
+
+sns.scatterplot(x='Session_Duration (hours)', y='Calories_Burned', hue='Workout_Type', data=df)
+plt.title("Session Duration vs Calories Burned")
+plt.xlabel("Session Duration (hours)")
+plt.ylabel("Calories Burned")
+plt.show()
+
 sns.lineplot(data=bmi_trend, x='Workout_Frequency (days/week)', y='BMI')
 plt.title("BMI vs Workout Frequency")
 plt.xlabel("Workout Frequency (days/week)")
