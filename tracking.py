@@ -82,6 +82,11 @@ print(bmi_trend)
 correlation = df['Session_Duration (hours)'].corr(df['Calories_Burned'])
 print(f"Correlation between Session_Duration and Calories_Burned: {correlation:.2f}")
 
+print(df[columns_to_normalize].describe())
+
+print(df[columns_to_standardize].mean())
+print(df[columns_to_standardize].std())
+
 calories_trend = df.groupby(['Workout_Type', 'Gender'])['Calories_Burned'].mean().reset_index()
 print(calories_trend)
 sns.barplot(data=calories_trend, x='Workout_Type', y='Calories_Burned', hue='Gender')
