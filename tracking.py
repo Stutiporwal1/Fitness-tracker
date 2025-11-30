@@ -76,4 +76,13 @@ sns.countplot(x='Workout_Type', data=df)
 plt.title("Workout Type Distribution")
 plt.show()
 
+bmi_trend = df.groupby('Workout_Frequency (days/week)')['BMI'].mean().reset_index()
+print(bmi_trend)
+
+sns.lineplot(data=bmi_trend, x='Workout_Frequency (days/week)', y='BMI')
+plt.title("BMI vs Workout Frequency")
+plt.xlabel("Workout Frequency (days/week)")
+plt.ylabel("Average BMI")
+plt.show()
+
 
