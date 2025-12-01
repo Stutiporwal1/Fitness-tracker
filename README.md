@@ -9,3 +9,6 @@ A smart fitness tracking model that counts your heart rate, Blood Pressure (BP).
 ## Tool 
 - Google Colab
 - VS Code
+  
+## Dataset 
+Publicly available Dataset on Kaggle.
